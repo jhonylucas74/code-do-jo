@@ -1,0 +1,10 @@
+.compare-pricing {
+  padding: 20px;
+  width: 100%;
+  max-width: 250px;
+  background-color: #fff;
+}
+
+.compare-pricing code {
+  font-size: 12px;
+}
