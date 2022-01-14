@@ -16,10 +16,16 @@ const moneyToValue = money => {
 
 const CurrencyInput = ({ value, onChange, ...props }) => {
 	return (
-  	<input
-      {...props}
-      value={valueToMoney(value)}
-      onChange={e => onChange(moneyToValue(e.target.value))} />
+    <label>
+      Você envia
+      <div>
+        <span>{'BRL'}</span>
+        <input
+          {...props}
+          value={valueToMoney(value)}
+          onChange={e => onChange(moneyToValue(e.target.value))} />
+      </div>
+      </label>
   );
 }
 

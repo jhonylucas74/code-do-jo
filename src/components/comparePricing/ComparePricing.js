@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import PrincingService from '../../services/PricingService'
 import CurrencyInput from '../currencyInput/CurrencyInput'
+import ComparisonDisplay from '../ComparisonDisplay/ComparisonDisplay'
 import './ComparePricing.css'
 
 const pricing = new PrincingService()
@@ -11,16 +12,21 @@ const ComparePricing = () => {
  
 	useEffect(() => {
     pricing.simulate(amount).then(res => {
-      setSimulation(JSON.stringify(res))
+      setSimulation(res)
     })
 	}, [amount])
 
   return (
     <div className="compare-pricing">
       <CurrencyInput value={amount} onChange={setAmount} />
-      <div>
-        <code>{simulation}</code>
-      </div>
+      <hr/>
+      { simulation && (
+        <>
+          <ComparisonDisplay  currency="USD" company="Bancos Tradicionais" rate={simulation.bank.tax} amount={simulation.bank.amount} />
+          <hr/>
+          <ComparisonDisplay currency="USD" company="Remessa Online" rate={simulation.remessa.tax} amount={simulation.remessa.amount} />
+        </>
+      )}
     </div>
   )
 }

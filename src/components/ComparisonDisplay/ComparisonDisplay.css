@@ -1,0 +1,23 @@
+.bar-container {
+    position: relative;
+}
+
+.bar-container > progress {
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    top: -12px;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.bar-values {
+  /* position: absolute;
+  top: -5px; */
+  z-index: 1;
+}
+
+.bar-values, .title-container {
+  display: flex;
+  justify-content: space-between;
+}
