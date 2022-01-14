@@ -9,7 +9,7 @@ const pricing = new PrincingService()
 const ComparePricing = () => {
 	const [amount, setAmount] =	useState(5000)
   const [simulation, setSimulation] = useState({})
- 
+
 	useEffect(() => {
     pricing.simulate(amount).then(res => {
       setSimulation(res)
