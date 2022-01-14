@@ -1,0 +1,33 @@
+h3{
+  font-size: 12px;
+  margin-bottom: 1px;
+  margin-top: 3px;
+}
+
+p{
+  font-size: 9px
+}
+
+.info-box{
+  height: 76px;
+  border-top: 1px solid #F0EDED;
+  width: 100%;
+}
+
+.info-box__subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-box__graphic {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #006FF2;
+  border-radius: 10px;
+  color: #fff;
+  align-items: center;
+  padding-left: 4px;
+}

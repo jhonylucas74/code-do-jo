@@ -1,8 +1,16 @@
 .compare-pricing {
-  padding: 20px;
-  width: 100%;
-  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  width: 269px;
+  height: 228px;
   background-color: #fff;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.compare-pricing__input{
+  height: 76px;
 }
 
 .compare-pricing code {
