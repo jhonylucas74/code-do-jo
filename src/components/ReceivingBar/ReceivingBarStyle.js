@@ -12,7 +12,7 @@ export const Container = styled.div`
 `
 export const AmountBar = styled.div`
   width: ${(props) => `${(1 - props.tax) * 100}%`};
-  background: blue;z
+  background: blue;
   border-radius: 6px;
   color: white;
   padding: 5px 10px;
@@ -29,7 +29,7 @@ export const TaxBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  pading: 10px 10px;
+  pading: 5px 10px;
   transition: .5s all;
 `
 

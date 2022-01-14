@@ -21,18 +21,16 @@ const ComparePricing = () => {
   if (bank && remessa) return (
     <div className="compare-pricing">
       <CurrencyInput value={amount} onChange={setAmount} />
-      <div>
-        <ReceivingBar
-          institutionName="Bancos tradicionais"
-          amount={ bank.amount }
-          tax={ bank.tax }
-        />
-        <ReceivingBar
-          institutionName="Remessa Online"
-          amount={ remessa.amount}
-          tax={ remessa.tax }
-        />
-      </div>
+      <ReceivingBar
+        institutionName="Bancos tradicionais"
+        amount={ bank.amount }
+        tax={ bank.tax }
+      />
+      <ReceivingBar
+        institutionName="Remessa Online"
+        amount={ remessa.amount}
+        tax={ remessa.tax }
+      />
     </div>
   )
 return (<p>Loading..</p>)

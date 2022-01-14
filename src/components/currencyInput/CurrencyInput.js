@@ -15,15 +15,26 @@ const moneyToValue = money => {
   ) || 0) / 100;
 }
 
+const handleChange = (onChange, e) => {
+  onChange(moneyToValue(e.target.value))
+}
+
 const CurrencyInput = ({ value, onChange, ...props }) => {
 	return (
     <>
       <span> Você envia</span> <br /><br />
-      <S.Input
-        {...props}
-        value={valueToMoney(value)}
-        onChange={e => onChange(moneyToValue(e.target.value))}
-      />
+      <S.Div>
+        <S.InputLabel htmlFor="amountValue">
+          BRL
+        </S.InputLabel><br /><br />
+          <S.Input
+            {...props}
+            value={valueToMoney(value)}
+            // onChange={e => onChange(moneyToValue(e.target.value))}
+            onChange={e => handleChange(onChange, e)}
+            id="amountValue"
+          />
+      </S.Div>
     </>
   );
 }
