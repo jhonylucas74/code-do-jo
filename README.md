@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+# Desafios do Code do Jô
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Comparar preços
+
+O desafio será criar um componente em react que é a cara da remessa. O nom componente é **Comparar Preços** e será desenvolvido com base no layout abaixo:
+
+![image](https://user-images.githubusercontent.com/5381250/149383452-3f611244-4406-4797-bf01-7775d4258e70.png)
+
+https://www.figma.com/file/JCsLkMBb5ZO1tUFDAip6OC/Code-Dojo-Challenge?node-id=0%3A1
+
+* O componente precisa ser desenvolvido com a a ferramenta de code share sugerida nesse documento. 
+* O componente não possui seletores de currency. As informações do tipo de moeda serão passadas para o componente como props.
+* O usuário poderá editar o valor do input, quando isso ocorrer o valor apresentado da simulação deverá mudar.
+* A consulta de preço, simulação, será feita usando uma função de mock disponibilizada para a atividade.
+* A parte vermelha da barra de preço deve aumentar quando a porcetagem das taxas aumenta.
+* Caso o usuário digite 0 no input deverá ser apresentado o estado de erro do componente.
+
+
 
 ## Available Scripts
 
