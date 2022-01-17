@@ -1,6 +1,5 @@
 .compare-container {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #F0EDED;
 }
 
 .compare-text {
@@ -18,13 +17,12 @@
   background-color: #006FF2;
   padding: 5px;
   border-radius: 10px 0 0 10px;
-  width: 70%;
+  width: 100%;
 }
 
 .compare-info :nth-child(2) {
   right: 0;
   background: #FF5D5D;
   padding: 5px;
-  border-radius: 10px;
-  width: 30%;
+  border-radius: 0 10px 10px 0;
 }

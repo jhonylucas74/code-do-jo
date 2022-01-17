@@ -18,8 +18,11 @@ const ComparePricing = ({sender, receiver}) => {
 
   return (
     <div className="compare-pricing">
-      <span>{sender}</span>
-      <CurrencyInput value={amount} onChange={setAmount} />
+      <h4>Você envia</h4>
+      <div className='input-container'>
+        <span>{sender}</span>
+        <CurrencyInput value={amount} onChange={setAmount} />
+      </div>
       <CompareTax title="Bancos tradicionais" receiver={receiver} amount={simulation.bank.amount} tax={simulation.bank.tax}/>
       <CompareTax title="Remessa Online" receiver={receiver} amount={simulation.remessa.amount} tax={simulation.remessa.tax}/>
     </div>
