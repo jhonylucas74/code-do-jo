@@ -1,3 +1,4 @@
+import './CurrencyInput.css'
 
 const moneyformatter =  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
@@ -16,10 +17,16 @@ const moneyToValue = money => {
 
 const CurrencyInput = ({ value, onChange, ...props }) => {
 	return (
-  	<input
-      {...props}
-      value={valueToMoney(value)}
-      onChange={e => onChange(moneyToValue(e.target.value))} />
+    <label>
+      Você envia
+      <div className="input-container">
+        <span className='currency'>{'BRL'}</span>
+        <input
+          {...props}
+          value={valueToMoney(value)}
+          onChange={e => onChange(moneyToValue(e.target.value))} />
+      </div>
+      </label>
   );
 }
 

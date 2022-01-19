@@ -3,8 +3,13 @@
   width: 100%;
   max-width: 250px;
   background-color: #fff;
+  border-radius: 4px;
 }
 
 .compare-pricing code {
   font-size: 12px;
+}
+
+body {
+  color: #113366
 }

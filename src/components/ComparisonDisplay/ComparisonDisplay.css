@@ -1,0 +1,23 @@
+.bar-values {
+  /* position: absolute;
+  top: -5px; */
+  z-index: 1;
+}
+
+.bar-values, .title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+}
+
+.title-container span {
+  font-size: 9px;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
