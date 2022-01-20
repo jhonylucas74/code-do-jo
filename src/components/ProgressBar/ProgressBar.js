@@ -1,24 +1,29 @@
 import React from "react";
-import "./ProgressBar.css";
 
-const ProgressBar = ({ simulation }) => {
-  // console.log(simulation);
+import {
+  ProgressBarContainer,
+  ProgressBarStyle,
+  SubtitleSimulation,
+} from "./styles";
+
+const ProgressBar = ({ simulation, isZero }) => {
   const { tax, amount } = simulation;
-  console.log(tax, amount);
+  const toPercentage = `${tax * 300}%`;
+
   return (
     <>
-      <div className="subtitleSimulation">
-        <p className="subtitleSimulationTitle">Você Recebe</p>
-        <p className="subtitleSimulationTitle">Taxas</p>
-      </div>
-      <div className="progressBarContainer">
-        <div className="amountBar">
-          <p className="simulationValue">USD {Math.round(amount)}</p>
-        </div>
-        <div className="taxBar">
-          <p className="simulationValue">{tax * 100}%</p>
-        </div>
-      </div>
+      <SubtitleSimulation>
+        <p>Você Recebe</p>
+        <p>Taxas</p>
+      </SubtitleSimulation>
+      <ProgressBarContainer isZero={isZero}>
+        <ProgressBarStyle>
+          <p>USD {Math.round(amount)}</p>
+        </ProgressBarStyle>
+        <ProgressBarStyle width={toPercentage} marginLeft={`-${toPercentage}`}>
+          <p>{Math.round(tax * 100)}%</p>
+        </ProgressBarStyle>
+      </ProgressBarContainer>
     </>
   );
 };

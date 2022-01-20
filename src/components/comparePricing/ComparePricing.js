@@ -9,11 +9,17 @@ const pricing = new PrincingService();
 const ComparePricing = () => {
   const [amount, setAmount] = useState(5000);
   const [simulation, setSimulation] = useState("");
+  const [isZero, setIsZero] = useState(false);
 
   useEffect(() => {
-    pricing.simulate(amount).then((res) => {
-      setSimulation(res);
-    });
+    if (amount > 0) {
+      pricing.simulate(amount).then((res) => {
+        setSimulation(res);
+        setIsZero(false);
+      });
+    } else {
+      setIsZero(true);
+    }
   }, [amount]);
 
   return (
@@ -23,19 +29,24 @@ const ComparePricing = () => {
         className="input_sender"
         value={amount}
         onChange={setAmount}
+        isZero={isZero}
       />
       <div>
         <div className="container-progressbar">
           <p className="title">Bancos Tradicionais</p>
           <div>
-            {simulation && <ProgressBar simulation={simulation.bank} />}
+            {simulation && (
+              <ProgressBar simulation={simulation.bank} isZero={isZero} />
+            )}
           </div>
         </div>
 
         <div div className="container-progressbar">
           <p className="title">Remessa Online</p>
           <div>
-            {simulation && <ProgressBar simulation={simulation.remessa} />}
+            {simulation && (
+              <ProgressBar simulation={simulation.remessa} isZero={isZero} />
+            )}
           </div>
         </div>
       </div>
