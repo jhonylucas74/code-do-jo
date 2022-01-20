@@ -1,10 +1,42 @@
+.container-progressbar {
+  border-top: 1px solid lightgray;
+  margin-top: 10px;
+}
+
 .compare-pricing {
-  padding: 20px;
-  width: 100%;
-  max-width: 250px;
+  height: 228px;
+  width: 269px;
+  left: 19px;
+  top: 21px;
+  border-radius: 4px;
   background-color: #fff;
+  padding: 15px;
 }
 
 .compare-pricing code {
   font-size: 12px;
+}
+
+.input_sender {
+  height: 32px;
+  width: 237px;
+  left: 34px;
+  top: 55px;
+  border-radius: 4px;
+}
+
+.title {
+  width: 237px;
+  height: 15px;
+  left: 34px;
+  top: 33px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #113366;
+  margin: 8px 0;
 }

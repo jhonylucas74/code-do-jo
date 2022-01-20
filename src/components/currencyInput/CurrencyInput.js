@@ -1,26 +1,29 @@
+import { InputWrap } from "./styles";
 
-const moneyformatter =  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+const moneyformatter = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
 
-const valueToMoney = value => {
-  return moneyformatter
-    .format(value)
-    .replace('R$', '')
-}
+const valueToMoney = (value) => {
+  return moneyformatter.format(value).replace("R$", "");
+};
 
-const moneyToValue = money => {
-  return (parseFloat(money
-    .replace(',', '.')
-    .replaceAll('.', '')
-  ) || 0) / 100;
-}
+const moneyToValue = (money) => {
+  return (parseFloat(money.replace(",", ".").replaceAll(".", "")) || 0) / 100;
+};
 
-const CurrencyInput = ({ value, onChange, ...props }) => {
-	return (
-  	<input
-      {...props}
-      value={valueToMoney(value)}
-      onChange={e => onChange(moneyToValue(e.target.value))} />
+const CurrencyInput = ({ value, onChange, isZero, ...props }) => {
+  return (
+    <InputWrap isZero={isZero}>
+      <span className="currency">BRL</span>
+      <input
+        {...props}
+        value={valueToMoney(value)}
+        onChange={(e) => onChange(moneyToValue(e.target.value))}
+      />
+    </InputWrap>
   );
-}
+};
 
-export default CurrencyInput
+export default CurrencyInput;
