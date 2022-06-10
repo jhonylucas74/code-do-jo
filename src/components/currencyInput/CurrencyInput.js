@@ -1,3 +1,4 @@
+import "./currencyInput.css";
 
 const moneyformatter =  new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
